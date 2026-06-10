@@ -1,0 +1,970 @@
+/* ==========================================================================
+   1. FONTS & RESET
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&family=Caveat:wght@400..700&family=DM+Serif+Text:ital@0;1&family=Gabarito:wght@400..900&family=Gilda+Display&family=Lexend:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #24140e;
+    background-image: url('assets/cocadust11.png');
+    background-size: cover;
+    background-position: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding-bottom: 50px;
+}
+
+/* Logo Container */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.center-container img {
+    max-width: 25%;
+    min-width: 120px;
+}
+
+/* ==========================================================================
+   3. HERO CONTENT & LAYOUT (Mobile-First Design)
+   ========================================================================== */
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    gap: 40px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1 {
+    font-family: "Gabarito", sans-serif;
+    font-size: 40px;
+    color: #eee9e3;
+    max-width: 100%;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #eee9e3;
+    max-width: 450px;
+    font-size: 16px;
+    font-family: "DM Serif Text", serif;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.order-button {
+    background-color: #eee9e3;
+    width: 100%;
+    max-width: 250px;
+    height: 48px;
+    border-radius: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Gabarito", sans-serif;
+    font-weight: 700;
+    color: #3d2a1c;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.order-button:hover {
+    transform: scale(1.02);
+    background-color: #eee9e3b7;
+}
+
+.hero .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .img img {
+    max-width: 350px;
+    width: 100%;
+}
+
+/* ==========================================================================
+   4. DESKTOP MEDIA QUERY (Screens wider than 992px)
+   ========================================================================== */
+@media (min-width: 992px) {
+    .center {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        align-items: center;
+        padding-top: 80px;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 0;
+    }
+
+    .info {
+        align-items: flex-start;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+        max-width: 600px;
+        margin-bottom: 25px;
+    }
+
+    .hero p {
+        max-width: 500px;
+        margin-bottom: 35px;
+    }
+
+    .order-button {
+        width: 250px;
+        max-width: none;
+    }
+
+    .hero .img img {
+        max-width: 480px;
+    }
+}
+
+.informative {
+    padding: 80px 20px;
+    text-align: center;
+    background-image: url("assets/creamy.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #24140e;
+}
+
+.informative h1 {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.288);
+    font-family: "Gabarito", sans-serif;
+    font-size: 40px;
+    color: #24140e;
+    margin-bottom: 60px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.icons div {
+    background-color: #ffffff4b;
+    cursor: pointer;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.icons div:hover {
+    transform: translateY(-8px);
+}
+
+.icons img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.icons h2 {
+    font-family: "Gabarito", sans-serif;
+    color: #24140e;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.288);
+}
+
+.icons p {
+    font-family: "DM Serif Text", serif;
+    color: #24140e;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+@media (min-width: 992px) {
+    .informative {
+        padding: 120px 40px;
+    }
+
+    .informative h1 {
+        font-size: 55px;
+        margin-bottom: 80px;
+    }
+
+    .icons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .icons div {
+        width: 350px;
+        min-height: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icons h2 {
+        font-size: 28px;
+    }
+
+    .icons p {
+        font-size: 16px;
+    }
+}
+
+/* ==========================================================================
+   5. REFINED COLLECTION SECTION (DARK LUXURY THEME)
+   ========================================================================== */
+.collection {
+    padding: 100px 20px;
+    background-color: #24140e;
+    /* Your gorgeous rich brown choice */
+    text-align: center;
+    color: #eee9e3;
+}
+
+.collection h1 {
+    font-family: "Gabarito", sans-serif;
+    font-size: 50px;
+    color: #eee9e3;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.collection .subtitle {
+    font-family: "DM Serif Text", serif;
+    color: #eee9e3;
+    opacity: 0.9;
+    max-width: 500px;
+    margin: 0 auto 80px;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    font-size: 16px;
+}
+
+/* LAYOUT GROUPS FOR VISUAL VARIETY */
+.collection-row,
+.showcase-row {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category {
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.category h2 {
+    font-family: "Gabarito", sans-serif;
+    font-size: 20px;
+    color: #eee9e3;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(238, 233, 227, 0.15);
+    /* Delicate, subtle visual separator */
+    padding-bottom: 12px;
+    text-align: left;
+    /* Clean, modern alignment balance */
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.category h2 span {
+    font-size: 14px;
+    color: #d8c9c1;
+    text-transform: none;
+    letter-spacing: 0;
+    font-family: "DM Serif Text", serif;
+    font-style: italic;
+}
+
+/* CARDS WRAPPER INTERACTION */
+.items {
+    display: flex;
+    gap: 24px;
+    justify-content: flex-start;
+}
+
+/* ELEVATED LOOK FOR THE CARDS */
+.card {
+    background: #eee9e310;
+    border-radius: 12px;
+    /* Crisper edges emphasize structural premium layouts */
+    padding: 16px;
+    width: 100%;
+    max-width: 270px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    /* Rich depth framing text layers beautifully */
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+    position: relative;
+    text-align: left;
+    /* Left align matching the high-end look headers */
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+    width: 100%;
+    height: 240px;
+    /* Keeps consistent vertical height */
+    object-fit: cover;
+    border-radius: 8px;
+    /* Clean, slightly softened edges look very premium */
+    margin-bottom: 15px;
+
+    /* Adds direct depth to the photo element only */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.card h3 {
+    font-family: "Gabarito", sans-serif;
+    color: #eee9e3;
+    /* Updated to white/cream text for contrast */
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* REPOSITIONED OVERLAY LABEL BADGES */
+.badge {
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    z-index: 5;
+    padding: 6px 12px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #24140e;
+    color: #eee9e3;
+    border-radius: 4px;
+    font-family: "Gabarito", sans-serif;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* INCREASE CONSTRAINT FOR LARGER SINGLE SHOWCASE CARDS */
+.card.highlight,
+.card.grand {
+    border: none;
+    width: 100%;
+    max-width: 320px;
+    background: #eee9e310;
+    padding: 16px;
+}
+
+/* ==========================================================================
+   6. DESKTOP ADVANCED GRID CONSTRAINTS (Screens wider than 992px)
+   ========================================================================== */
+@media (min-width: 992px) {
+    .collection {
+        padding: 140px 40px;
+    }
+
+    /* Puts Classics and Deluxe sections perfectly on 1 horizontal row */
+    .collection-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        margin-bottom: 20px;
+    }
+
+    /* Arranges sharing sizes beautifully across a spacious 3-column block */
+    .showcase-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+
+    /* Asymmetric touch: Slightly elevates middle showcase element for character */
+    .feature-highlight .card {
+        margin-top: -10px;
+    }
+}
+
+/* Responsive Adaptive Cleanups */
+@media (max-width: 768px) {
+    .collection h1 {
+        font-size: 40px;
+    }
+
+    .items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 320px;
+    }
+
+    .category h2 {
+        font-size: 18px;
+    }
+}
+
+/* ==========================================================================
+   7. EDITORIAL GALLERY LOOKBOOK (HORIZONTAL SMOOTH CAROUSEL)
+   ========================================================================== */
+.gallery-section {
+    padding: 100px 0;
+    /* Top/Bottom padding only so track stretches edge-to-edge */
+    background-color: #24140e;
+    /* Signature rich cocoa background */
+    text-align: center;
+    overflow: hidden;
+}
+
+.gallery-header {
+    max-width: 600px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+    /* Restores side padding to text only */
+}
+
+.gallery-header h1 {
+    font-family: "Gabarito", sans-serif;
+    font-size: 44px;
+    color: #eee9e3;
+    margin-bottom: 15px;
+}
+
+.gallery-header p {
+    font-family: "DM Serif Text", serif;
+    color: #eee9e3;
+    opacity: 0.85;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* THE CAROUSEL WINDOW */
+.carousel-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    /* Enables natural horizontal scrolling */
+    padding: 20px 40px 40px;
+    /* Room for shadows below */
+    scrollbar-width: none;
+    /* Invisible scrollbar for Firefox */
+}
+
+/* Hides native scrollbars for Chrome, Safari, and Opera */
+.carousel-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* THE HORIZONTAL TRACK */
+.carousel-track {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+    /* Dynamically sizes to hold all images horizontally */
+    scroll-snap-type: x mandatory;
+    /* Makes images magnetic when scrolling stops */
+    padding-right: 40px;
+    /* Extra breathing room at the very end of the line */
+}
+
+/* INDIVIDUAL CAROUSEL PANELS */
+.carousel-item {
+    width: 320px;
+    /* Perfect editorial portrait width */
+    height: 420px;
+    /* Tall aspect ratio looks incredibly high-end */
+    flex-shrink: 0;
+    /* Prevents images from compressing down */
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    scroll-snap-align: start;
+    /* Magnetic attachment anchor point */
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Premium Hover State Interaction */
+.carousel-item:hover {
+    transform: translateY(-8px);
+}
+
+.carousel-item:hover img {
+    transform: scale(1.03);
+}
+
+/* DESKTOP RESPONSIVE CONFIGURATIONS (992px+) */
+@media (min-width: 992px) {
+    .gallery-section {
+        padding: 120px 0;
+    }
+
+    .carousel-wrapper {
+        padding-left: calc((100vw - 1200px) / 2 + 40px);
+        /* Intelligently aligns grid start with your headers */
+    }
+
+    .carousel-item {
+        width: 360px;
+        /* Slightly wider display windows on desktop */
+        height: 480px;
+    }
+}
+
+/* MOBILE VIEWPORT ADJUSTMENTS */
+@media (max-width: 768px) {
+    .gallery-header h1 {
+        font-size: 34px;
+    }
+
+    .carousel-wrapper {
+        padding-left: 20px;
+        /* Flush alignment matching grid bounds on mobile screens */
+    }
+
+    .carousel-item {
+        width: 280px;
+        height: 380px;
+    }
+}
+
+/* ==========================================================================
+   7.5 CUSTOMER TESTIMONIALS STYLING
+   ========================================================================== */
+.feedback-section {
+    padding: 120px 20px;
+    background-color: #eee9e3;
+    /* Using your lighter signature cocoa brown for section contrast */
+    color: #24140e;
+    text-align: center;
+}
+
+.feedback-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feedback-subtitle {
+    font-family: "DM Serif Text", serif;
+    font-style: italic;
+    color: #24140e;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.feedback-title {
+    font-family: "Gabarito", sans-serif;
+    font-size: 44px;
+    color: #24140e;
+    margin-bottom: 60px;
+}
+
+/* THE FEEDBACK GRID */
+.feedback-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* EDITORIAL REVIEW CARDS */
+.feedback-card {
+    background: #06030009;
+    /* Extremely subtle tint */
+    border-left: 3px solid rgba(216, 201, 193, 0.4);
+    /* Elegant left border accent */
+    padding: 40px 35px;
+    border-radius: 0 16px 16px 0;
+    /* Rounded only on the right side */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.feedback-card:hover {
+    background: rgba(238, 233, 227, 0.06);
+    transform: translateX(5px);
+    /* Soft horizontal nudge on hover */
+}
+
+.feedback-card .quote {
+    font-family: "DM Serif Text", serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #24140e;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* Sleek Typographic Styling for Names */
+.client-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.client-name {
+    font-family: "Gabarito", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #24140e;
+}
+
+.client-verified {
+    font-family: "Gabarito", sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #24140e;
+    opacity: 0.7;
+}
+
+/* ADVANCED DESKTOP FEEDBACK CONFIGURATION (992px+) */
+@media (min-width: 992px) {
+    .feedback-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* 3-column masonry look on desktop */
+        gap: 30px;
+    }
+
+    .feedback-card {
+        border-left: none;
+        border-top: 3px solid rgba(216, 201, 193, 0.3);
+        /* Shifts accent line to the top */
+        border-radius: 16px;
+        padding: 45px 30px;
+    }
+
+    .feedback-card:hover {
+        transform: translateY(-8px);
+        /* Lifts upward instead of shifting right on desktop */
+    }
+}
+
+/* MOBILE CONFIGURATION SCREEN REFINEMENTS */
+@media (max-width: 768px) {
+    .feedback-title {
+        font-size: 34px;
+    }
+
+    .feedback-card .quote {
+        font-size: 16px;
+    }
+}
+
+/* ==========================================================================
+   8. SECURING YOUR SELECTION SECTION STYLING
+   ========================================================================== */
+.order-steps-section {
+    padding: 100px 20px;
+    background-color: #24140e;
+    /* Rich dark espresso background */
+    color: #eee9e3;
+    text-align: center;
+}
+
+.steps-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.steps-title {
+    font-family: "Gabarito", sans-serif;
+    font-size: 38px;
+    color: #eee9e3;
+    margin-bottom: 60px;
+    letter-spacing: 0.5px;
+}
+
+.steps-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Elegant "Ghost" Card Styling to match your lookbook aesthetic */
+.step-card {
+    background: transparent;
+    /* Seamless clean background */
+    border-top: 1px solid rgba(238, 233, 227, 0.15);
+    /* Delicate, minimal structural separator */
+    padding: 40px 10px;
+    text-align: left;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    font-family: "Gabarito", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #d8c9c1;
+    display: inline-block;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.step-card h2 {
+    font-family: "Gabarito", sans-serif;
+    font-size: 24px;
+    color: #eee9e3;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.step-card p {
+    font-family: "DM Serif Text", serif;
+    font-size: 15px;
+    color: #eee9e3;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   9. FINAL CTA BANNER STYLING
+   ========================================================================== */
+/* ==========================================================================
+   9. FINAL CTA BANNER STYLING (REFINED CREAM VARIANT)
+   ========================================================================== */
+.final-cta.cream-variant {
+    padding: 120px 20px;
+    /* Uses a bright cream overlay over your background asset texture */
+    background-image: url('assets/creamy.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Retains that gorgeous premium parallax scroll effect */
+    text-align: center;
+    color: #3d2a1c;
+    /* Inverted to deep cocoa brown for ultimate legibility */
+}
+
+.cta-content {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.final-cta.cream-variant h2 {
+    font-family: "Gabarito", sans-serif;
+    font-size: 42px;
+    color: #24140e;
+    /* Deep rich accent */
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: none;
+    /* Removed dark shadow for a clean minimal layout */
+}
+
+.final-cta.cream-variant p {
+    font-family: "DM Serif Text", serif;
+    font-size: 17px;
+    color: #24140e;
+    opacity: 0.95;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Customized Dark Button to contrast against the cream backdrop */
+.final-cta.cream-variant .order-button.dark-btn {
+    background-color: #24140e;
+    /* Velvet dark brown button */
+    color: #eee9e3;
+    /* Light cream text */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.final-cta.cream-variant .order-button.dark-btn:hover {
+    transform: scale(1.02);
+    background-color: #24140e;
+    /* Soft highlight shift on hover */
+}
+
+/* Desktop sizing adaptation */
+@media (min-width: 992px) {
+    .final-cta.cream-variant h2 {
+        font-size: 54px;
+    }
+}
+
+/* Mobile sizing adaptation */
+@media (max-width: 768px) {
+    .final-cta.cream-variant h2 {
+        font-size: 34px;
+    }
+}
+
+/* ==========================================================================
+   10. FOOTER STYLING
+   ========================================================================== */
+.main-footer {
+    background-color: #24140e;
+    /* Deepest roasted coffee tone to ground the base */
+    color: #eee9e3;
+    padding: 80px 20px 40px;
+    font-family: "Gabarito", sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-bottom: 1px solid rgba(238, 233, 227, 0.08);
+    padding-bottom: 50px;
+}
+
+.footer-brand h3 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.footer-brand p {
+    font-family: "DM Serif Text", serif;
+    font-style: italic;
+    color: #d8c9c1;
+    font-size: 14px;
+}
+
+.footer-info p {
+    font-size: 15px;
+    opacity: 0.8;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-socials a {
+    color: #eee9e3;
+    text-decoration: none;
+    font-size: 15px;
+    opacity: 0.75;
+    position: relative;
+    transition: opacity 0.3s ease;
+}
+
+.footer-socials a:hover {
+    opacity: 1;
+}
+
+/* Delicate editorial underline style on hover */
+.footer-socials a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #d8c9c1;
+    transition: width 0.3s ease;
+}
+
+.footer-socials a:hover::after {
+    width: 100%;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    font-size: 12px;
+    opacity: 0.4;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+/* ==========================================================================
+   ADVANCED DESKTOP RESPONSIVENESS (992px+)
+   ========================================================================== */
+@media (min-width: 992px) {
+    .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 clean horizontal column blocks */
+        gap: 40px;
+    }
+
+    .step-card {
+        border-top: none;
+        border-left: 1px solid rgba(238, 233, 227, 0.12);
+        /* Horizontal separator line changes to vertical separator */
+        padding: 10px 0 10px 30px;
+    }
+
+    .step-card:first-child {
+        border-left: none;
+        /* Removes first card's edge line */
+        padding-left: 0;
+    }
+
+    .final-cta h2 {
+        font-size: 54px;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+/* MOBILE CONFIGURATION FIXES */
+@media (max-width: 768px) {
+    .steps-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .final-cta h2 {
+        font-size: 34px;
+    }
+}
