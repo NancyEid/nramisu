@@ -389,36 +389,71 @@ body {
 /* ==========================================================================
    COLLECTION CUSTOMIZATION NOTICE
    ========================================================================== */
-.customization-notice {
+/* Container layout if you want a clean vertical flow */
+.customization-container {
     max-width: 600px;
-    margin: 60px auto 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+    margin: 0 auto;
     padding: 20px;
-    border-top: 1px dashed rgba(238, 233, 227, 0.2);
-    border-bottom: 1px dashed rgba(238, 233, 227, 0.2);
+    text-align: center;
 }
 
-.customization-notice .sparkle {
-    color: #d8c9c1;
-    font-size: 14px;
-}
-
-.customization-notice p {
-    font-family: "Gabarito", sans-serif;
-    font-size: 15px;
-    font-weight: 900;
-    color: #eee9e3;
+.customization-subtext {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 8px;
     letter-spacing: 0.5px;
 }
 
-.customization-notice p span {
-    font-family: "DM Serif Text", serif;
-    font-style: italic;
-    color: #d8c9c1;
-    margin-left: 5px;
+.personalize {
+    font-family: "Gabarito", sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    color: #eee9e3;
+
+}
+
+.personalize span {
+    font-size: 15px;
+    font-weight: 100;
+}
+
+/* 3 columns on desktop, 2 columns on small mobile screens */
+.customization-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.gallery-item {
+    aspect-ratio: 1 / 1;
+    /* Keeps images perfectly square */
+    overflow: hidden;
+    border-radius: 4px;
+    /* Soft, subtle edge */
+    background-color: #f9f9f9;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Prevents stretching */
+    transition: transform 0.4s ease;
+}
+
+/* Subtle, high-end hover effect */
+.gallery-item:hover img {
+    transform: scale(1.03);
+}
+
+@media (max-width: 480px) {
+    .customization-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2x3 grid on small phones */
+        gap: 8px;
+    }
 }
 
 /* ==========================================================================
