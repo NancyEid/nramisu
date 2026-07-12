@@ -3,6 +3,15 @@
    ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One&family=Caveat:wght@400..700&family=DM+Serif+Text:ital@0;1&family=Gabarito:wght@400..900&family=Gilda+Display&family=Lexend:wght@100..900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background: #462724;
+    color: #eee9e3;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -73,10 +82,24 @@ body {
     margin-bottom: 30px;
 }
 
-.order-button {
-    background-color: #eee9e3;
+.cta-container {
+    display: flex;
+    flex-direction: row;
+    /* Keeps them beside each other */
+    gap: 12px;
+    /* Clean space between them */
     width: 100%;
-    max-width: 250px;
+    max-width: 450px;
+    /* Matches paragraph width to look unified */
+    justify-content: center;
+    /* Centered on mobile by default */
+    margin-bottom: 20px;
+}
+
+/* Common base style for both buttons */
+.order-button {
+    width: 50%;
+    /* Splits the space evenly */
     height: 48px;
     border-radius: 10px;
     display: inline-flex;
@@ -85,15 +108,53 @@ body {
     text-decoration: none;
     font-family: "Gabarito", sans-serif;
     font-weight: 700;
-    color: #3d2a1c;
-    font-size: 20px;
+    font-size: 16px;
+    /* Dropped slightly from 20px for a more high-end feel */
     letter-spacing: 0.5px;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
-.order-button:hover {
-    transform: scale(1.02);
-    background-color: #eee9e3b7;
+/* Primary Button: VIEW MENU (Solid Cream) */
+.menu-btn {
+    background-color: #eee9e3;
+    color: #3d2a1c;
+    border: 2px solid #eee9e3;
+}
+
+.menu-btn:hover {
+    transform: translateY(-2px);
+    /* Sleek vertical lift instead of scaling */
+    background-color: #e5dfd7;
+    border-color: #e5dfd7;
+}
+
+/* Secondary Button: ORDER NOW (Premium Transparent Outline) */
+.order-now-btn {
+    background-color: transparent;
+    color: #eee9e3;
+    border: 2px solid #eee9e3;
+}
+
+.order-now-btn:hover {
+    transform: translateY(-2px);
+    background-color: #eee9e3;
+    color: #3d2a1c;
+}
+
+/* --- MOBILE SPECIFIC QUERY (For small screens where side-by-side gets too squished) --- */
+@media (max-width: 480px) {
+    .cta-container {
+        flex-direction: column;
+        /* Stack vertically only on very small screens */
+        align-items: center;
+    }
+
+    .order-button {
+        width: 100%;
+        max-width: 280px;
+        /* Comfortable standard tap size on mobile */
+    }
 }
 
 .hero .img {
@@ -399,7 +460,7 @@ body {
 
 .customization-subtext {
     font-size: 0.9rem;
-    color: #666;
+    color: #c1c1c1;
     font-style: italic;
     margin-top: 8px;
     letter-spacing: 0.5px;
@@ -407,15 +468,14 @@ body {
 
 .personalize {
     font-family: "Gabarito", sans-serif;
-    font-size: 17px;
-    font-weight: 800;
+    /* font-size: 30px; */
+    /* font-weight: 800; */
     color: #eee9e3;
 
 }
 
 .personalize span {
-    font-size: 15px;
-    font-weight: 100;
+    font-size: 22px;
 }
 
 /* 3 columns on desktop, 2 columns on small mobile screens */
@@ -833,6 +893,86 @@ body {
     color: #eee9e3;
     opacity: 0.8;
     line-height: 1.6;
+}
+
+/* ==========================================================================
+   STORAGE & SERVING
+   ========================================================================== */
+
+.storage-section {
+    padding: 110px 20px;
+    background-color: #eee9e3;
+    color: #24140e;
+    text-align: center;
+}
+
+.storage-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.storage-subtitle {
+    font-family: "DM Serif Text", serif;
+    font-style: italic;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.storage-title {
+    font-family: "Gabarito", sans-serif;
+    font-size: 44px;
+    margin-bottom: 60px;
+}
+
+.storage-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.storage-card {
+    background: rgba(36, 20, 14, 0.04);
+    padding: 40px 30px;
+    border-radius: 16px;
+    transition: transform .3s ease;
+}
+
+.storage-card:hover {
+    transform: translateY(-6px);
+}
+
+.storage-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.storage-card h2 {
+    font-family: "Gabarito", sans-serif;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.storage-card p {
+    font-family: "DM Serif Text", serif;
+    line-height: 1.7;
+    color: #24140e;
+    opacity: .9;
+}
+
+@media (min-width: 992px) {
+
+    .storage-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .storage-title {
+        font-size: 52px;
+    }
 }
 
 /* ==========================================================================

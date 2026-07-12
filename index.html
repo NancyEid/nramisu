@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/logo brown.png" type="image/png">
     <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#24140e">
+    <meta name="description"
+        content="Premium handcrafted tiramisu in Egypt. Freshly made to order with customizable white chocolate messages for birthdays, gifts and special occasions.">
     <title>N'ramisu | Layers of Perfection</title>
 </head>
 
@@ -17,7 +21,12 @@
             <div class="info">
                 <h1>Welcome To The Art of Tiramisu.</h1>
                 <p>Authentically crafted, Exquisitely balanced. Your premium tiramisu experience starts here.</p>
-                <a href="https://ig.me/m/nramisu" target="_blank" class="order-button">ORDER NOW</a>
+
+                <!-- BUTTONS CONTAINED HERE -->
+                <div class="cta-container">
+                    <a href="#collection" class="order-button menu-btn">VIEW MENU</a>
+                    <a href="https://ig.me/m/nramisu" target="_blank" class="order-button order-now-btn">ORDER NOW</a>
+                </div>
             </div>
             <div class="img">
                 <img src="assets/download_edited.png" alt="tiramisu">
@@ -30,26 +39,27 @@
 
         <div class="icons">
             <div>
-                <img src="assets/premium.png" alt="Premium ingredients">
+                <img loading="lazy" decoding="async" loading="lazy" src="assets/premium.png" alt="Premium ingredients">
                 <h2>Premium Ingredients</h2>
                 <p>Made with carefully selected ingredients to deliver a rich and authentic taste.</p>
             </div>
 
             <div>
-                <img src="assets/quality.png" alt="Handcrafted quality">
+                <img loading="lazy" decoding="async" loading="lazy" src="assets/quality.png" alt="Handcrafted quality">
                 <h2>Handcrafted Quality</h2>
                 <p>Each tiramisu is carefully crafted to ensure exceptional flavor and presentation.</p>
             </div>
 
             <div>
-                <img src="assets/occasion.png" alt="Perfect for every occasion">
+                <img loading="lazy" decoding="async" loading="lazy" src="assets/occasion.png"
+                    alt="Perfect for every occasion">
                 <h2>Perfect for Every Occasion</h2>
                 <p>Ideal for celebrations, gifts, gatherings, or simply treating yourself.</p>
             </div>
         </div>
     </section>
 
-    <section class="collection">
+    <section class="collection" id="collection">
         <h1>The N’ramisu Collection</h1>
         <p class="subtitle">
             A handcrafted selection of tiramisu creations designed for every moment, from personal indulgence to sharing
@@ -61,12 +71,14 @@
                 <h2>The Classics <span>(1 person)</span></h2>
                 <div class="items">
                     <div class="card">
-                        <img src="assets/classic-rounded.png" alt="Classic Rounded">
+                        <img loading="lazy" decoding="async" loading="lazy" src="assets/classic-rounded.png"
+                            alt="Classic Rounded">
                         <h3>Classic-Rounded</h3> <span>110 LE</span>
                     </div>
 
                     <div class="card">
-                        <img src="assets/classic-squared.png" alt="Classic Squared">
+                        <img loading="lazy" decoding="async" loading="lazy" src="assets/classic-squared.png"
+                            alt="Classic Squared">
                         <h3>Classic-Squared</h3><span>130 LE</span>
                     </div>
                 </div>
@@ -76,12 +88,14 @@
                 <h2>Deluxe Cup <span>(1–2 person)</span></h2>
                 <div class="items">
                     <div class="card">
-                        <img src="assets/deluxerounded.png" alt="Deluxe Cup Rounded">
+                        <img loading="lazy" decoding="async" loading="lazy" src="assets/deluxerounded.png"
+                            alt="Deluxe Cup Rounded">
                         <h3>Deluxe Cup-Rounded</h3><span>200 LE</span>
                     </div>
 
                     <div class="card">
-                        <img src="assets/deluxe squared.png" alt="Deluxe Cup Squared">
+                        <img loading="lazy" decoding="async" loading="lazy" src="assets/deluxe squared.png"
+                            alt="Deluxe Cup Squared">
                         <h3>Deluxe Cup-Squared</h3><span>200 LE</span>
                     </div>
                 </div>
@@ -93,7 +107,8 @@
                 <h2>Deluxe Double <span>(2–3 people)</span></h2>
                 <div class="items single">
                     <div class="card">
-                        <img src="assets/deluxedouble.png" alt="Deluxe Double">
+                        <img loading="lazy" decoding="async" loading="lazy" src="assets/deluxedouble.png"
+                            alt="Deluxe Double">
                         <h3>Deluxe Double</h3><span>350 LE</span>
                     </div>
                 </div>
@@ -104,7 +119,8 @@
                 <div class="items single">
                     <div class="card highlight">
                         <span class="badge">Best for gatherings</span>
-                        <img src="assets/crowdpleaser.png" alt="Crowd Pleaser">
+                        <img loading="lazy" decoding="async" loading="lazy" src="assets/crowdpleaser.png"
+                            alt="Crowd Pleaser">
                         <h3>Crowd Pleaser</h3><span>450 LE</span>
                     </div>
                 </div>
@@ -115,7 +131,8 @@
                 <div class="items single">
                     <div class="card grand">
                         <span class="badge">Party Size</span>
-                        <img src="assets/grande1.jpg" alt="Nramisu Grande">
+                        <img loading="lazy" decoding="async" loading="lazy" src="assets/grande1.jpg"
+                            alt="Nramisu Grande">
                         <h3>N’ramisu Grande</h3><span>850 LE</span>
                     </div>
                 </div>
@@ -123,37 +140,52 @@
         </div>
         <div class="customization-container">
             <div class="customization-notice">
-                <span class="sparkle">✦</span>
+                <h1>FOR ADD ONS</h1>
                 <p class="personalize">
-                    Personalize your selection with handcrafted white chocolate letters. <br> <br>
+                    <!-- Personalize your selection with handcrafted white chocolate letters. <br> <br> -->
                     <span class="price-range">
-                        Custom white chocolate name or word: +20 LE
-                        <br>
-                        Two words or long messages: +30 LE </span>
+                        One word, name, or numbers:+25 LE
+                        <br> <br>
+                        Two or more words/longer message:+35 LE </span>
                 </p>
                 <br>
+                <span class="sparkle">✦</span>
+
                 <p class="customization-subtext">
-                    Craft a bespoke message for someone special. Whether it’s a name, a milestone, or a quiet note of
-                    appreciation.
-                </p>
+                    Add a handcrafted white chocolate message for birthdays, anniversaries, graduations, proposals, or
+                    simply because. </p>
             </div>
 
             <!-- 6-Image Grid showcasing the white chocolate lettering -->
             <div class="customization-gallery">
-                <div class="gallery-item"><img src="assets/proud.jpeg" alt="Custom white chocolate lettering example">
+                <div class="gallery-item"><img loading="lazy" decoding="async" loading="lazy" src="assets/proud.jpeg"
+                        alt="Custom white chocolate lettering example">
                 </div>
-                <div class="gallery-item"><img src="assets/gallery9.jpg" alt="Custom white chocolate lettering example">
+                <div class="gallery-item"><img loading="lazy" decoding="async" loading="lazy" src="assets/wifey.jpeg"
+                        alt="Custom white chocolate lettering example">
                 </div>
-                <div class="gallery-item"><img src="assets/tuleen.jpeg" alt="Custom white chocolate lettering example">
+                <div class="gallery-item"><img loading="lazy" decoding="async" loading="lazy"
+                        src="assets/happybirthday.jpeg" alt="Custom white chocolate lettering example">
                 </div>
-                <div class="gallery-item"><img src="assets/engaged.jpeg" alt="Custom white chocolate lettering example">
+                <div class="gallery-item"><img loading="lazy" decoding="async" loading="lazy" src="assets/bride.jpeg"
+                        alt="Custom white chocolate lettering example">
                 </div>
-                <div class="gallery-item"><img src="assets/graduation.jpeg"
-                        alt="Custom white chocolate lettering example"></div>
-
-
-                <div class="gallery-item"><img src="assets/mrs rawan.jpeg"
-                        alt="Custom white chocolate lettering example"></div>
+                <div class="gallery-item"><img loading="lazy" decoding="async" loading="lazy"
+                        src="assets/graduation.jpeg" alt="Custom white chocolate lettering example"></div>
+                <div class="gallery-item"><img loading="lazy" decoding="async" loading="lazy" src="assets/gallery9.jpg"
+                        alt="Custom white chocolate lettering example">
+                </div>
+                <div class="gallery-item"><img loading="lazy" decoding="async" loading="lazy" src="assets/tuleen.jpeg"
+                        alt="Custom white chocolate lettering example">
+                </div>
+                <div class="gallery-item"><img loading="lazy" decoding="async" loading="lazy" src="assets/engaged.jpeg"
+                        alt="Custom white chocolate lettering example">
+                </div>
+                <div class="gallery-item"><img loading="lazy" decoding="async" loading="lazy"
+                        src="assets/mrs rawan.jpeg" alt="Custom white chocolate lettering example"></div>
+                <div class="gallery-item"><img loading="lazy" decoding="async" loading="lazy" src="assets/tra.jpeg"
+                        alt="Custom white chocolate lettering example">
+                </div>
             </div>
         </div>
     </section>
@@ -166,15 +198,42 @@
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
-                <div class="carousel-item"><img src="assets/gallery1.jpg" alt="N'ramisu texture"></div>
-                <div class="carousel-item"><img src="assets/gallery2.jpg" alt="Tiramisu preparation"></div>
-                <div class="carousel-item"><img src="assets/gallery3.jpg" alt="Classic close-up"></div>
-                <div class="carousel-item"><img src="assets/gallery4.jpg" alt="Cocoa dusting"></div>
-                <div class="carousel-item"><img src="assets/gallery5.jpg" alt="Gathering sizes"></div>
-                <div class="carousel-item"><img src="assets/gallery6.jpg" alt="Espresso layers"></div>
-                <div class="carousel-item"><img src="assets/gallery7.jpg" alt="Boutique dessert details"></div>
-                <div class="carousel-item"><img src="assets/gallery8.jpg" alt="Packaging aesthetic"></div>
-                <div class="carousel-item"><img src="assets/gallery9.jpg" alt="Complete collection"></div>
+                <div class="carousel-item"><img loading="lazy" decoding="async" loading="lazy" src="assets/gallery1.jpg"
+                        alt="N'ramisu texture"></div>
+                <div class="carousel-item"><img loading="lazy" decoding="async" loading="lazy"
+                        src="assets/gallery10.jpeg" alt="Complete collection">
+                </div>
+                <div class="carousel-item"><img loading="lazy" decoding="async" loading="lazy"
+                        src="assets/gallery12.jpeg" alt="Complete collection">
+                </div>
+                <div class="carousel-item"><img loading="lazy" decoding="async" loading="lazy"
+                        src="assets/gallery11.jpeg" alt="Complete collection">
+                </div>
+                <div class="carousel-item"><img loading="lazy" decoding="async" loading="lazy"
+                        src="assets/gallery13.jpeg" alt="Complete collection">
+                </div>
+                <div class="carousel-item"><img loading="lazy" decoding="async" loading="lazy" src="assets/gallery2.jpg"
+                        alt="Tiramisu preparation">
+                </div>
+                <div class="carousel-item"><img loading="lazy" decoding="async" loading="lazy" src="assets/gallery3.jpg"
+                        alt="Classic close-up"></div>
+                <div class="carousel-item"><img loading="lazy" decoding="async" loading="lazy" src="assets/gallery4.jpg"
+                        alt="Cocoa dusting"></div>
+                <div class="carousel-item"><img loading="lazy" decoding="async" loading="lazy" src="assets/gallery5.jpg"
+                        alt="Gathering sizes"></div>
+                <div class="carousel-item"><img loading="lazy" decoding="async" loading="lazy" src="assets/gallery6.jpg"
+                        alt="Espresso layers"></div>
+                <div class="carousel-item"><img loading="lazy" decoding="async" loading="lazy" src="assets/gallery7.jpg"
+                        alt="Boutique dessert details">
+                </div>
+                <div class="carousel-item"><img loading="lazy" decoding="async" loading="lazy" src="assets/gallery8.jpg"
+                        alt="Packaging aesthetic">
+                </div>
+                <div class="carousel-item"><img loading="lazy" decoding="async" loading="lazy" src="assets/gallery9.jpg"
+                        alt="Complete collection">
+                </div>
+
+
             </div>
         </div>
     </section>
@@ -237,13 +296,60 @@
                 <div class="step-card">
                     <span class="step-number">03</span>
                     <h2>Freshly Handcrafted</h2>
-                    <p>Your tiramisu is prepared entirely fresh to order, ensuring absolute velvet texture and premium
-                        flavor upon arrival.</p>
+                    <p>Every N'ramisu is handcrafted fresh to order for the perfect texture and flavor.</p>
                 </div>
             </div>
         </div>
     </section>
+    <section class="storage-section">
+        <div class="storage-container">
+            <span class="storage-subtitle">Before You Enjoy</span>
+            <h1 class="storage-title">Storage & Serving</h1>
 
+            <div class="storage-grid">
+
+                <div class="storage-card">
+                    <img loading="lazy" decoding="async" loading="lazy" src="assets/snowflake.png" alt="Serve Chilled"
+                        class="storage-icon">
+                    <h2>Serve Chilled</h2>
+                    <p>
+                        Enjoy your N'RAMISU straight from the refrigerator for the creamiest texture and richest flavor.
+                    </p>
+                </div>
+
+                <div class="storage-card">
+                    <img loading="lazy" decoding="async" loading="lazy" src="assets/temperature.png" alt="Serve Chilled"
+                        class="storage-icon">
+                    <h2>Keep Refrigerated</h2>
+                    <p>
+                        Store at
+                        <strong>0–4°C</strong>.
+                        to maintain freshness.
+                    </p>
+                </div>
+
+                <div class="storage-card">
+                    <img loading="lazy" decoding="async" loading="lazy" src="assets/calendar-date.png"
+                        alt="Serve Chilled" class="storage-icon">
+                    <h2>Best Enjoyed Within</h2>
+                    <p>
+                        <strong>3 days</strong> of receiving your order for the
+                        best texture and flavor.
+                    </p>
+                </div>
+
+                <div class="storage-card">
+                    <img loading="lazy" decoding="async" loading="lazy" src="assets/traffic-signal.png"
+                        alt="Serve Chilled" class="storage-icon">
+                    <h2>Do Not Freeze</h2>
+                    <p>
+                        Freezing may affect the texture and overall quality.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
     <section class="final-cta cream-variant">
         <div class="cta-content">
             <h2>Indulgence is Just a Message Away.</h2>
@@ -263,7 +369,7 @@
 
             <div class="footer-info">
                 <p>Based in New Damietta, Egypt</p>
-                <p>Freshly Handcrafted Daily</p>
+                <p>Freshly Handcrafted to Order</p>
             </div>
 
             <div class="footer-socials">
