@@ -400,6 +400,11 @@ body {
     font-weight: 600;
 }
 
+.customization-tag {
+    font-size: 20px;
+    color: #fff3bb;
+}
+
 .customization-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
