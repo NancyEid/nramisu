@@ -36,9 +36,10 @@ body {
     background-position: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     padding-bottom: 50px;
-    padding-top: 110px;
+    padding-top: 20px;
 }
 
+/* 
 .top-bar {
     position: fixed;
     top: 0;
@@ -58,12 +59,13 @@ body {
     background: #24140e7d;
     backdrop-filter: blur(7px);
     box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
-}
+} */
 
-.top-logo img {
+/* .top-logo img {
     height: 60px;
-}
+} */
 
+/* 
 .cart-button {
     width: 40px;
     height: 40px;
@@ -87,9 +89,9 @@ body {
 
 .cart-icon {
     width: 25px;
-}
+} */
 
-#cart-count {
+/* #cart-count {
 
     position: absolute;
     top: -6px;
@@ -108,17 +110,16 @@ body {
 
     font-weight: 700;
 
-}
+} */
 
 .center-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
 }
 
 .center-container img {
-    max-width: 25%;
+    max-width: 58%;
     min-width: 120px;
 }
 
