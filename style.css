@@ -463,15 +463,17 @@ body {
 
 .customization-subtext {
     font-size: 1.1rem;
-    color: #c1c1c1;
-    font-style: italic;
+    color: #fff2e6;
+    /* font-style: italic; */
     line-height: 1.4;
     margin: 0;
+    font-weight: bold;
+
 }
 
 .customization-subtext strong {
     color: #ffffff;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .customization-tag {
